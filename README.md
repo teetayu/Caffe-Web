@@ -129,9 +129,3 @@ index.html
 
 โดยรวมโปรเจกต์นี้ช่วยสร้างพื้นฐานสำคัญสำหรับการทำ Web Application  
 และสามารถต่อยอดไปสู่ Frontend Framework เช่น React, Vue หรือ Tailwind ได้ในอนาคต
-
----
-
-##  9. Repository Link
-
-https://github.com/teetayu/Caffe-Web
