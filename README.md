@@ -1,6 +1,5 @@
 # Caffe-Web 
-### ระบบเว็บไซต์ร้านกาแฟ (Demo Frontend Project)  
-รายวิชาที่เกี่ยวข้อง: Web Programming / Software Engineering / UI Development  
+### ระบบเว็บไซต์ร้านกาแฟ (Demo Frontend Project)
 
 ---
 
