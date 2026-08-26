@@ -2,10 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector(".slider");
     const navLinks = document.querySelectorAll(".slider-nav a");
     const slides = document.querySelectorAll(".slider img");
-    let currentIndex = 0;
-    const slideInterval = 3000; // 3 วินาที
+    
+    if (!slider || navLinks.length === 0 || slides.length === 0) return;
 
-    // ฟังก์ชันเพิ่ม active class
+    let currentIndex = 0;
+    const slideInterval = 3000; // 3 seconds
+
+    // Function to add active class to dots
     const updateActiveNav = (index) => {
         navLinks.forEach((link, i) => {
             if (i === index) {
@@ -16,18 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // ฟังก์ชันเลื่อนไปยังภาพ
+    // Function to scroll to slide
     const goToSlide = (index) => {
-        const slideWidth = slides[0].clientWidth; // ความกว้างของรูป
+        const slideWidth = slides[0].clientWidth; // Get width dynamically to support screen resizing
         slider.scrollTo({
             left: slideWidth * index,
             behavior: "smooth",
         });
         currentIndex = index;
-        updateActiveNav(currentIndex); // อัปเดตสถานะปุ่ม
+        updateActiveNav(currentIndex);
     };
 
-    // เพิ่มเหตุการณ์คลิกให้กับปุ่ม
+    // Click event for navigation dots
     navLinks.forEach((link, index) => {
         link.addEventListener("click", (event) => {
             event.preventDefault();
@@ -35,12 +38,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ทำให้ภาพเลื่อนไปเรื่อย ๆ
-    setInterval(() => {
+    // Auto slide scroll
+    let autoSlide = setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         goToSlide(currentIndex);
     }, slideInterval);
 
-    // เรียกครั้งแรกเพื่อเน้นปุ่มแรก
+    // Reset auto-slide timer when user interacts manually
+    const resetTimer = () => {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            goToSlide(currentIndex);
+        }, slideInterval);
+    };
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", resetTimer);
+    });
+
+    // Initial state
     updateActiveNav(currentIndex);
 });

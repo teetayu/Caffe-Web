@@ -1,0 +1,78 @@
+.mainx {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.mainx p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #CC8837;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.mainx form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    max-width: none;
+}
+
+.mainx input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.mainx input:focus {
+    border-color: #CC8837;
+}
+
+.mainx button {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #CC8837;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.mainx button:hover {
+    background-color: #b5742a;
+}
+
+.mainx a {
+    text-decoration: none;
+    color: #CC8837;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.mainx a:hover {
+    color: #925319;
+}
+
+.mainx .links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}

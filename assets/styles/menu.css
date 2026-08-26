@@ -1,0 +1,98 @@
+.box-text-signature, .box-text-menu {
+    text-align: center;
+    padding: 3rem 1rem 1.5rem 1rem;
+    width: 100%;
+}
+
+.box-text-signature h1, .box-text-menu h1 {
+    font-size: 2.2rem;
+    color: #CC8837;
+    position: relative;
+    display: inline-block;
+}
+
+.box-text-signature h1::after, .box-text-menu h1::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC8837;
+}
+
+.box-all-signature, .box-all-menu {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 4rem 1rem;
+    width: 100%;
+}
+
+.box-details-signature, .box-details-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 1.5rem;
+    width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.box-details-signature:hover, .box-details-menu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.box-pic-signature img, .box-pic-menu img {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.box-name-signature p, .box-name-menu p {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.box-price-signature p, .box-price-menu p {
+    font-size: 1.1rem;
+    color: #CC8837;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.box-buy-signature, .box-buy-menu {
+    margin-top: auto;
+    width: 100%;
+}
+
+.box-buy-signature button, .box-buy-menu button {
+    width: 100%;
+    padding: 0.7rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.box-buy-signature button:hover, .box-buy-menu button:hover {
+    background-color: #439a46;
+    transform: translateY(-1px);
+}

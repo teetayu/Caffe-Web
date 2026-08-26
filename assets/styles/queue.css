@@ -1,0 +1,21 @@
+.box-queue-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.box-queue-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    font-size: 4.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: white;
+    color: #CC8837;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 5px solid #CC8837;
+}

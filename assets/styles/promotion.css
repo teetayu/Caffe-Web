@@ -1,0 +1,15 @@
+.box-promotion-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    width: 100%;
+}
+
+.box-promotion-1 img {
+    max-width: 100%;
+    width: 380px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}

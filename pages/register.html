@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - CAFFE AMENTES</title>
+    <!-- Base and Page Stylesheets -->
+    <link rel="stylesheet" href="/assets/styles/global.css">
+    <link rel="stylesheet" href="/assets/styles/register.css">
+    <!-- Validation script -->
+    <script src="/assets/js/register.js" defer></script>
+</head>
+
+<body>
+    <!-- Header/Navbar Start -->
+    <div class="box-head">
+        <div class="box-logoAndname">
+            <div class="box-logo-head">
+                <img src="/assets/images/logo.png" alt="LOGO">
+            </div>
+            <div class="box-name-logo">
+                <p>CAFFE AMENTES</p>
+            </div>
+        </div>
+        <div class="box-menuAll">
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/pages/menu.html">MENU</a></li>
+                <li><a href="/pages/promotion.html">PROMOTION</a></li>
+                <li><a href="/pages/queue.html">QUEUE</a></li>
+                <li><a href="/pages/review.html">REVIEW</a></li>
+                <li><a href="/pages/about-us.html">ABOUT US</a></li>
+            </ul>
+        </div>
+        <div class="box-login-head">
+            <div class="box-login-text">
+                <a href="/pages/login.html">LOGIN</a>
+            </div>
+        </div>
+    </div>
+    <!-- Header/Navbar End -->
+
+    <!-- Main Content Start -->
+    <div class="box-main">
+        <div class="mainx">
+            <form action="" method="POST">
+                <div class="box1main">
+                    <p>Register</p>
+                </div>
+                
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="Enter your username" required minlength="3" maxlength="15">
+                
+                <label>Birthday</label>
+                <div class="birthday-fields">
+                    <select id="day" name="day" required>
+                        <option value="" selected disabled>Day</option>
+                        <script>
+                            for(let i=1; i<=31; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                    <select id="month" name="month" required>
+                        <option value="" selected disabled>Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <select id="year" name="year" required>
+                        <option value="" selected disabled>Year</option>
+                        <script>
+                            const currentYear = new Date().getFullYear();
+                            for(let i=currentYear; i>=1940; i--) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+                
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="example@domain.com" required>
+                
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="0123456789" pattern="[0-9]{10}" required>
+                
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter password" required minlength="6">
+                
+                <label>Gender</label>
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    <label for="other">Other</label>
+                </div>
+                
+                <p id="genderError" style="color: red; display: none; font-size: 0.85rem; text-align: center;">Please select a gender.</p>
+                
+                <button type="submit" id="registerBtn" disabled>Register</button>
+            </form>
+            
+            <div class="box3main">
+                Already have an account? <a href="/pages/login.html">Login</a>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content End -->
+
+    <!-- Footer Start -->
+    <div class="box-footer">
+        <div class="box-logoAndtext">
+            <div class="box-logo-footer">
+                <img src="/assets/images/logo.png" alt="LOGO">
+            </div>
+            <div class="box-textAndnamelogo-1">
+                <p>CAFFE AMENTES</p>
+            </div>
+            <div class="box-textAndnamelogo-2">
+                <p>Start Your Day</p>
+                <p>the Right Way.</p>
+            </div>
+        </div>
+        
+        <div class="box-contact-us">
+            <div class="box-contact-title">
+                <h3>Contact us</h3>
+            </div>
+            <div class="box-phone">
+                <p><img src="/assets/images/phone-call.png" alt="Phone Icon">022-222-2222</p>
+            </div>
+            <div class="box-email">
+                <p><img src="/assets/images/email.png" alt="Email Icon">Caffe.amentes@gmail.com</p>
+            </div>
+            <div class="box-line">
+                <p><img src="/assets/images/line.png" alt="Line Icon">Amentes</p>
+            </div>
+        </div>
+        
+        <div class="box-quick-link">
+            <div class="box-quick-title">
+                <h3>Quick link</h3>
+            </div>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Term of Service</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        
+        <div class="box-follow">
+            <div class="box-follow-title">
+                <h3>Follow</h3>
+            </div>
+            <div class="box-follow-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img src="/assets/images/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="/assets/images/instagram.png" alt="instagram"></a>
+                <a href="https://x.com/" target="_blank"><img src="/assets/images/twitter.png" alt="twitter"></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="box-copyright">
+        <p>&copy; 2024 CAFFE AMENTES. Crafted with love and coffee. All rights reserved.</p>
+    </div>
+    <!-- Footer End -->
+</body>
+
+</html>

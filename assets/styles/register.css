@@ -1,0 +1,147 @@
+.mainx {
+    width: 100%;
+    max-width: 480px;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.box1main {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #CC8837;
+    margin-bottom: 1.5rem;
+}
+
+.mainx form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mainx label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: -0.5rem;
+}
+
+.mainx input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.mainx input:focus {
+    border-color: #CC8837;
+}
+
+/* Birthday select layouts */
+.birthday-fields {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mainx select {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: white;
+    transition: border-color 0.2s ease;
+}
+
+.mainx select:focus {
+    border-color: #CC8837;
+}
+
+/* Gender selector radio tabs */
+.gender {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.gender input[type="radio"] {
+    display: none;
+}
+
+.gender label {
+    display: block;
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background-color: #f9f9f9;
+    color: #555;
+    text-align: center;
+    margin: 0;
+    border-right: 1px solid #ddd;
+}
+
+.gender label:last-child {
+    border-right: none;
+}
+
+.gender input[type="radio"]:checked + label {
+    background-color: #CC8837;
+    color: white;
+}
+
+.gender label:hover:not(.checked) {
+    background-color: #eee;
+}
+
+/* Submit and register buttons */
+.mainx button {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #CC8837;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    margin-top: 1rem;
+}
+
+.mainx button:hover {
+    background-color: #b5742a;
+}
+
+.mainx button:disabled {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.box3main {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.box3main a {
+    color: #CC8837;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.box3main a:hover {
+    color: #925319;
+}
